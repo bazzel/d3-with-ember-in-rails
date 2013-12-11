@@ -1,3 +1,3 @@
 Thing.destroy_all
 
-FactoryGirl.create_list :thing, 10**1
+FactoryGirl.create_list :thing, 10**2
