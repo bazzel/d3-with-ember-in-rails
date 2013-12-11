@@ -7,6 +7,7 @@ gem 'ember-rails'           # Ember for Rails 3.1+
 gem 'ember-source', '1.2.0' # Ember.js source code wrapper for use with Ruby libs.
 gem 'factory_girl_rails'
 gem 'faker'
+gem 'foundation-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -10,4 +10,3 @@
 window.App = Ember.Application.create()
 
 #= require_tree .
-

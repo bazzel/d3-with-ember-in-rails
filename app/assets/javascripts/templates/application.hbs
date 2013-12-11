@@ -1,4 +1,43 @@
-<header>Header</header>
-{{outlet}}
-<footer>Footer</footer>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Top Bar Title</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a href="#"><span>Menu</span></a>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="divider hide-for-small"></li>
+    </ul>
+    <ul class="right">
+      <li class="divider show-for-medium-and-up"></li>
+    </ul>
+  </section>
+</nav>
 
+<div class="row">
+  <div class="columns large-3">
+    <ul class="side-nav">
+      <li class="active">
+        <a href="#">Link 1</a>
+      </li>
+      <li>
+        <a href="#">Link 2</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#">Link 3</a>
+      </li>
+      <li>
+        <a href="#">Link 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="columns large-9">
+    <h1>D3 Charts as Ember.js components</h1>
+    {{outlet}}
+  </div>
+</div>
