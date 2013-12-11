@@ -1,11 +1,12 @@
-#= require d3/d3
+#= require ./chart-base
 
-App.DrawingTextComponent = Em.Component.extend
-  draw: (->
-    data = @get('data').toArray()
-    svg  = d3.select("##{@get('elementId')}")
+App.DrawingTextComponent = App.ChartBase.extend
+  draw: ->
+    dataset = @get('dataset')
+    svg     = @get('svg')
+
     svg.selectAll('p')
-      .data(data)
+      .data(dataset)
       .enter()
       .append('p')
       .text((d) -> d.get('category'))
@@ -15,7 +16,4 @@ App.DrawingTextComponent = Em.Component.extend
           when number < 100 then 'red'
           when number < 500 then 'yellow'
       )
-  ).on('didInsertElement')
-  # Currently data changes are not detected.
-  # This is not working:
-  #).observes('data.@each').on('didInsertElement')
+

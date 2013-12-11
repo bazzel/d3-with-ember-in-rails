@@ -1,11 +1,12 @@
-#= require d3/d3
+#= require ./chart-base
 
-App.SimpleBarChartComponent = Em.Component.extend
-  draw: (->
-    data = @get('data').toArray()
-    svg  = d3.select("##{@get('elementId')}")
+App.SimpleBarChartComponent = App.ChartBase.extend
+  draw: ->
+    dataset = @get('dataset')
+    svg     = @get('svg')
+
     svg.selectAll('div')
-      .data(data)
+      .data(dataset)
       .enter()
       .append('div')
       .attr('class', 'bar')
@@ -13,8 +14,3 @@ App.SimpleBarChartComponent = Em.Component.extend
         barHeight = d.get('number')/5
         "#{barHeight}px"
       )
-  ).on('didInsertElement')
-  # Currently data changes are not detected.
-  # This is not working:
-  #).observes('data.@each').on('didInsertElement')
-
