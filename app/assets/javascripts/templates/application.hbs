@@ -21,12 +21,12 @@
 <div class="row">
   <div class="columns large-3">
     <ul class="side-nav">
-      <li class="active">
-        <a href="#">Link 1</a>
-      </li>
-      <li>
-        <a href="#">Link 2</a>
-      </li>
+      {{#link-to 'charts.drawing-text' tagName='li' href=false}}
+        <a href='#'>Drawing Text</a>
+      {{/link-to}}
+      {{#link-to 'charts.simple-bar-chart' tagName='li' href=false}}
+        <a href='#'>Simple Bar Chart</a>
+      {{/link-to}}
       <li class="divider"></li>
       <li>
         <a href="#">Link 3</a>
