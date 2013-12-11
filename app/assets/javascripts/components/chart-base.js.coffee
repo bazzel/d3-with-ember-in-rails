@@ -12,4 +12,4 @@ App.ChartBase = Em.Component.extend
   #).observes('data.@each').on('didInsertElement')
 
   draw: ->
-    Ember.assert "You need to the 'draw()' method in #{@toString()}"
+    Ember.assert "You need to override the 'draw()' method in #{@toString()}"
